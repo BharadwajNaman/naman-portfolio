@@ -1,0 +1,1488 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --background: #07080b;
+
+    --surface: #0b0d10;
+
+    --border: #1d2025;
+
+    --border-light: #292d33;
+
+    --text: #e9edf3;
+
+    --muted: #858b96;
+
+    --muted-dark: #555b64;
+
+    --green: #00e88a;
+
+    --green-dark: #00b96d;
+
+    --max-width: 1180px;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Inter", sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+    background: var(--green);
+    color: #000;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    height: 70px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 28px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(7, 8, 11, 0.92);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.logo {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 0.5px;
+
+    color: var(--text);
+
+}
+
+
+.logo span {
+    color: var(--green);
+}
+
+
+.header-status {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+
+    height: 44px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 0 28px;
+
+    overflow-x: auto;
+
+}
+
+
+.navigation::-webkit-scrollbar {
+    display: none;
+}
+
+
+.navigation a {
+
+    white-space: nowrap;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+    transition: 0.2s ease;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 105px 28px;
+
+}
+
+
+.section-label {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--green);
+
+    margin-bottom: 30px;
+
+}
+
+
+.divider {
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 50px 0;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 700px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.hero-content {
+
+    padding: 30px 0 55px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(80px, 15vw, 180px);
+
+    line-height: 0.9;
+
+    letter-spacing: -7px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h2 {
+
+    font-size: clamp(27px, 4vw, 48px);
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.hero-description {
+
+    font-family: "DM Mono", monospace;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.button {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    padding: 15px 20px;
+
+    border: 1px solid var(--border-light);
+
+    transition: 0.2s ease;
+
+}
+
+
+.button-primary {
+
+    background: var(--green);
+
+    color: #000;
+
+    border-color: var(--green);
+
+}
+
+
+.button-primary:hover {
+
+    background: transparent;
+
+    color: var(--green);
+
+}
+
+
+.button-secondary:hover {
+
+    border-color: var(--green);
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   QUICK INFO
+========================================= */
+
+.quick-info {
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+.info-item {
+
+    padding: 24px 20px;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.info-item:last-child {
+    border-right: none;
+}
+
+
+.info-label {
+
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted-dark);
+
+    margin-bottom: 10px;
+
+}
+
+
+.info-value {
+
+    font-size: 15px;
+
+    color: var(--text);
+
+}
+
+
+/* =========================================
+   PAGE TITLES
+========================================= */
+
+.page-title {
+
+    max-width: 850px;
+
+}
+
+
+.page-title h2 {
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-title p {
+
+    max-width: 720px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+   SUB SECTIONS
+========================================= */
+
+.sub-section {
+
+    margin-bottom: 90px;
+
+}
+
+
+.sub-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.sub-heading h3 {
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+}
+
+
+.sub-heading span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.9fr;
+
+    gap: 80px;
+
+}
+
+
+.profile-text p {
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    margin-bottom: 22px;
+
+    max-width: 650px;
+
+}
+
+
+.profile-details {
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.detail-row span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+}
+
+
+.detail-row strong {
+
+    font-size: 13px;
+
+    text-align: right;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================
+   THREE COLUMNS
+========================================= */
+
+.three-columns {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
+.work-card {
+
+    padding: 25px;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.work-card:first-child {
+    padding-left: 0;
+}
+
+
+.work-card:last-child {
+
+    border-right: none;
+
+}
+
+
+.work-card h4 {
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.work-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline-row {
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr 180px;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.timeline-date,
+.timeline-location {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: var(--muted-dark);
+
+}
+
+
+.timeline-main h4 {
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    margin-bottom: 4px;
+
+}
+
+
+.timeline-main span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience-empty {
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 30px;
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.empty-number {
+
+    font-family: "DM Mono", monospace;
+
+    color: var(--muted-dark);
+
+}
+
+
+.experience-empty h3 {
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+
+}
+
+
+.experience-empty p {
+
+    color: var(--muted);
+
+    max-width: 650px;
+
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+}
+
+
+.tags span,
+.skill-tags span {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    padding: 6px 10px;
+
+    border: 1px solid var(--border-light);
+
+    color: var(--muted);
+
+}
+
+
+.experience-note {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    color: var(--muted);
+
+}
+
+
+.experience-note span {
+
+    color: var(--green);
+
+    font-family: "DM Mono", monospace;
+
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.project {
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.project-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.project-number {
+
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    color: var(--muted-dark);
+
+    font-size: 11px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.project h3 {
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+
+}
+
+
+.project-category {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--green);
+
+}
+
+
+.project-status {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+}
+
+
+.project-description {
+
+    max-width: 850px;
+
+    color: var(--muted);
+
+    margin: 25px 0 30px;
+
+    font-size: 16px;
+
+}
+
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.project-grid > div {
+
+    border: 1px solid var(--border);
+
+    padding: 18px;
+
+}
+
+
+.mini-label {
+
+    font-family: "DM Mono", monospace;
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+    margin-bottom: 8px;
+
+}
+
+
+.project-grid p {
+
+    font-size: 13px;
+
+    color: var(--text);
+
+}
+
+
+.project-flow {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.project-flow div {
+
+    border: 1px solid var(--border-light);
+
+    padding: 10px 15px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--muted);
+
+}
+
+
+.project-flow span {
+
+    color: var(--green);
+
+}
+
+
+.future-project {
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+}
+
+
+.skill-heading {
+
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--green);
+
+    margin-bottom: 18px;
+
+}
+
+
+.skill-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.learning-box {
+
+    margin-top: 60px;
+
+    border: 1px solid var(--border);
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.learning-box h3 {
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    max-width: 600px;
+
+}
+
+
+.learning-arrow {
+
+    font-size: 35px;
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   GOAL
+========================================= */
+
+.goal-section {
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.goal-content {
+
+    max-width: 900px;
+
+}
+
+
+.goal-content h2 {
+
+    font-size: clamp(40px, 7vw, 75px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.goal-content h2 span {
+
+    color: var(--green);
+
+}
+
+
+.goal-content p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    max-width: 750px;
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.contact-card {
+
+    position: relative;
+
+    min-height: 150px;
+
+    border: 1px solid var(--border);
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.2s ease;
+
+}
+
+
+.contact-card:hover {
+
+    border-color: var(--green);
+
+    transform: translateY(-3px);
+
+}
+
+
+.contact-label {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted-dark);
+
+}
+
+
+.contact-card strong {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    color: var(--text);
+
+    word-break: break-word;
+
+}
+
+
+.contact-arrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 25px 28px 45px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--muted-dark);
+
+}
+
+
+footer div {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+footer a:hover {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .quick-info {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .info-item:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .profile-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .three-columns {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .work-card {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+
+        padding: 25px 0;
+
+    }
+
+
+    .work-card:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .timeline-row {
+
+        grid-template-columns: 120px 1fr;
+
+    }
+
+
+    .timeline-location {
+
+        display: none;
+
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 18px;
+
+    }
+
+
+    .header-status {
+
+        display: none;
+
+    }
+
+
+    .navigation {
+
+        padding: 0 18px;
+
+        gap: 20px;
+
+    }
+
+
+    .section {
+
+        padding: 75px 18px;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .button {
+
+        text-align: center;
+
+    }
+
+
+    .quick-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .info-item {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .info-item:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .page-title h2 {
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .experience-empty {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .project-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .project-status {
+
+        margin-top: -15px;
+
+    }
+
+
+    .project-flow {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .learning-box {
+
+        align-items: flex-start;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+}
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
